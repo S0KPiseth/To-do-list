@@ -1,0 +1,26 @@
+:root {
+  --drag-color: #3297fd;
+  --transparent-color: transparent;
+  --background-color: white;
+  --border-color: rgba(0, 0, 0, 0.387);
+  --button-color: #6c2be2;
+  --text-color: black;
+  --condition-text-color: white;
+}
+[background-theme="dark"] {
+  --drag-color: #3297fd;
+  --background-color: hsl(235, 41%, 18%);
+  --border-color: rgba(0, 0, 0, 0.387);
+  --button-color: #6c2be2;
+  --text-color: black;
+  --condition-text-color: white;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--background-color);
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+}

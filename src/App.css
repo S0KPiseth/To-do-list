@@ -1,0 +1,43 @@
+.tapControl {
+  display: flex;
+  justify-content: space-evenly;
+}
+.tabSwitcher {
+  scale: 0;
+}
+.radioLabel {
+  font-size: 1.5rem;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 3vw;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: var(--transparent-colo);
+  color: var(--text-color);
+  width: 50%;
+}
+.dark-bg {
+  border: solid 2px black;
+  background-color: black;
+  color: var(--condition-text-color);
+}
+.addTask {
+  height: 3vw;
+  color: var(--condition-text-color);
+  border-radius: 10px;
+  background-color: var(--button-color);
+  border: 0;
+  margin-top: 10px;
+  width: 100%;
+  font-size: 20px;
+  box-shadow: 0 0 20px #6b2be2b7;
+}
+.wholeContent {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+.center-text {
+  text-align: center;
+}

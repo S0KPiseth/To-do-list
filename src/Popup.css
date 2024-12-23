@@ -1,0 +1,124 @@
+.popUpCard {
+  text-align: center;
+  background-color: var(--background-color);
+  border-radius: 1em;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 40%;
+  box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.249);
+}
+.closePopup {
+  font-size: 1.2rem;
+  margin-right: 5px;
+  border: 0;
+  background-color: transparent;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+#not {
+  font-size: 1rem;
+  width: 80%;
+  height: 3vw;
+  border-radius: 0.5em;
+}
+.taskNameLabel {
+  color: gray;
+  font-size: 1rem;
+  position: absolute;
+  left: 12%;
+  top: 25%;
+}
+#not:focus,
+#description:focus {
+  outline: none;
+  border-color: var(--button-color);
+}
+.transformTNL {
+  color: var(--button-color);
+  padding: 2px;
+  background-color: var(--background-color);
+  font-size: 0.8rem;
+  transform: translateY(-100%);
+  animation: transform 0.05s;
+}
+@keyframes transform {
+  from {
+    font-size: 1rem;
+    left: 16%;
+    top: 42%;
+  }
+  to {
+    font-size: 0.8rem;
+    transform: translateY(-100%);
+  }
+}
+.inputField {
+  margin-top: 10px;
+  text-align: left;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+#description {
+  border-width: 2px;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 0.5em;
+  height: 200px;
+  margin-bottom: 10px;
+}
+.tagContent {
+  width: 80%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  height: 3vw;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.buttonDiv {
+  justify-content: center;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  margin-bottom: 20px;
+}
+.buttonPopUp {
+  border-radius: 0.5em;
+  color: white;
+  background-color: black;
+  border: 0;
+  height: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 50%;
+}
+#done {
+  background-color: rgba(0, 128, 0, 0.786);
+}
+.tagGrid {
+  position: relative;
+  float: left;
+  width: 90%;
+  height: 100%;
+  border: 2px solid black;
+  border-radius: 0.5em 0 0 0.5em;
+}
+#colorTag {
+  border-radius: 0 0.5em 0.5em 0;
+  box-sizing: border-box;
+  height: 100%;
+}
+.tagGrid > p {
+  color: gray;
+  font-size: 1rem;
+  position: absolute;
+  left: 2.5%;
+  top: 24.5%;
+}

@@ -1,0 +1,56 @@
+p {
+  margin: 0;
+}
+.taskContent {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  margin-top: 10px;
+  display: flex;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+}
+.task_control {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.dragIcon {
+  display: flex;
+  position: relative;
+  width: 5%;
+  align-items: center;
+  justify-content: center;
+}
+.dragIcon > svg:hover {
+  fill: var(--drag-color);
+}
+.taskName {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.controlBtn {
+  border: 0;
+  background-color: transparent;
+}
+.tags {
+  opacity: 0.8;
+  border: 0;
+  padding: 5px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  border-radius: 2em;
+}
+.tagDiv {
+  column-gap: 5px;
+  display: flex;
+}
+.name {
+  font-size: 1.2rem;
+}
