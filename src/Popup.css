@@ -29,7 +29,7 @@
   font-size: 1rem;
   position: absolute;
   left: 12%;
-  top: 25%;
+  top: 30%;
 }
 #not:focus,
 #description:focus {
@@ -41,18 +41,18 @@
   padding: 2px;
   background-color: var(--background-color);
   font-size: 0.8rem;
-  transform: translateY(-100%);
+  transform: translateY(-140%);
   animation: transform 0.05s;
 }
 @keyframes transform {
   from {
     font-size: 1rem;
     left: 16%;
-    top: 42%;
+    top: 30%;
   }
   to {
     font-size: 0.8rem;
-    transform: translateY(-100%);
+    transform: translateY(-140%);
   }
 }
 .inputField {
@@ -90,11 +90,12 @@
   margin-bottom: 20px;
 }
 .buttonPopUp {
+  font-size: 1.2rem;
   border-radius: 0.5em;
   color: white;
   background-color: black;
   border: 0;
-  height: 30px;
+  height: 40px;
   margin-left: 10px;
   margin-right: 10px;
   width: 50%;
@@ -103,22 +104,74 @@
   background-color: rgba(0, 128, 0, 0.786);
 }
 .tagGrid {
+  padding: 10px;
+  display: flex;
   position: relative;
   float: left;
   width: 90%;
   height: 100%;
   border: 2px solid black;
   border-radius: 0.5em 0 0 0.5em;
+  /* overflow-x: hidden; */
 }
 #colorTag {
   border-radius: 0 0.5em 0.5em 0;
   box-sizing: border-box;
   height: 100%;
 }
-.tagGrid > p {
+.addTag {
   color: gray;
   font-size: 1rem;
   position: absolute;
   left: 2.5%;
-  top: 24.5%;
+  top: 32%;
+}
+.tagContainer {
+  align-items: center;
+  display: flex;
+  column-gap: 5px;
+}
+.tagContainer > span {
+  margin-right: 5px;
+  position: relative;
+  align-items: center;
+  display: flex;
+  background-color: #388afd42;
+  border: 0;
+  padding: 5px;
+  border-radius: 2em;
+  font-size: 0.8vw;
+}
+.tagContainer > span > p:nth-child(1) {
+  border-radius: 2em;
+  margin-right: 2px;
+  background-color: green;
+  width: 15px;
+  height: 15px;
+  min-width: 15px !important;
+}
+.tagContainer > span > p:nth-child(2) {
+  overflow: hidden;
+  max-height: 20px;
+  margin-right: 23px;
+}
+.tagContainer > span > button {
+  position: absolute;
+  min-width: 25px;
+  width: 25px;
+  height: 25px;
+  right: 0;
+  border: 0;
+  border-radius: 2em;
+  background-color: #388afd1f;
+}
+.transformaAT {
+  color: var(--button-color);
+  padding: 2px;
+  background-color: var(--background-color);
+  font-size: 0.8rem;
+  transform: translateY(-140%);
+}
+#inputTag {
+  border: 0;
 }

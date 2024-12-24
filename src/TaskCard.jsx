@@ -1,14 +1,28 @@
 import "./TaskCard.css";
 import PropTypes from "prop-types";
 
-function TaskCard(prop) {
-  let tags = prop.taskLabel.map((task, index) => (
+function TaskCard({ taskName, taskLabel, setActiveCard, idx }) {
+  let tags = taskLabel.map((task, index) => (
     <p className="tags" key={index} style={{ backgroundColor: task.color }}>
-      {task.name}
+      {task.tagname}
     </p>
   ));
+  function updateDropTarget(e) {
+    let target = document.elementFromPoint(e.clientX, e.clientY);
+
+    if (target && target.classList.contains("hiddrop")) {
+      target.classList.remove("hiddrop");
+      target.classList.add("dropArea");
+      if (document.querySelectorAll(".dropArea").length > 1) {
+        console.log("hi");
+        document.querySelectorAll(".dropArea").forEach((e) => (e.className = "hiddrop"));
+        target.className = "dropArea";
+      }
+    }
+  }
   return (
-    <div className="card" draggable>
+    // onDragStart={() => setDropStatus(true)} onDragEnd={() => setDropStatus(false)}
+    <div className="card" draggable onDrag={(e) => updateDropTarget(e)} onDragStart={() => setActiveCard(idx)} onDragEnd={() => setActiveCard(null)}>
       <div className="dragIcon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" height="30px">
           <path d="M40 352l48 0c22.1 0 40 17.9 40 40l0 48c0 22.1-17.9 40-40 40l-48 0c-22.1 0-40-17.9-40-40l0-48c0-22.1 17.9-40 40-40zm192 0l48 0c22.1 0 40 17.9 40 40l0 48c0 22.1-17.9 40-40 40l-48 0c-22.1 0-40-17.9-40-40l0-48c0-22.1 17.9-40 40-40zM40 320c-22.1 0-40-17.9-40-40l0-48c0-22.1 17.9-40 40-40l48 0c22.1 0 40 17.9 40 40l0 48c0 22.1-17.9 40-40 40l-48 0zM232 192l48 0c22.1 0 40 17.9 40 40l0 48c0 22.1-17.9 40-40 40l-48 0c-22.1 0-40-17.9-40-40l0-48c0-22.1 17.9-40 40-40zM40 160c-22.1 0-40-17.9-40-40L0 72C0 49.9 17.9 32 40 32l48 0c22.1 0 40 17.9 40 40l0 48c0 22.1-17.9 40-40 40l-48 0zM232 32l48 0c22.1 0 40 17.9 40 40l0 48c0 22.1-17.9 40-40 40l-48 0c-22.1 0-40-17.9-40-40l0-48c0-22.1 17.9-40 40-40z" />
@@ -17,7 +31,7 @@ function TaskCard(prop) {
 
       <div className="taskContent">
         <div className="taskName">
-          <p className="name">{prop.taskName}</p>
+          <p className="name">{taskName}</p>
           <div className="tagDiv">{tags}</div>
         </div>
         <div className="task_control">
@@ -41,8 +55,4 @@ function TaskCard(prop) {
     </div>
   );
 }
-TaskCard.propTypes = {
-  taskName: PropTypes.string,
-  taskLabel: PropTypes.arrayOf(PropTypes.object),
-};
 export default TaskCard;
