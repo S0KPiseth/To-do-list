@@ -1,7 +1,7 @@
 :root {
   --drag-color: #3297fd;
   --transparent-color: transparent;
-  --background-color: white;
+  --background-color: hsla(210, 11%, 93%, 0.811);
   --border-color: rgba(0, 0, 0, 0.387);
   --button-color: #6c2be2;
   --text-color: black;

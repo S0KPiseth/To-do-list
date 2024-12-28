@@ -8,8 +8,8 @@ function DropArea({ onDrop }) {
       }}
       onDragOver={(e) => e.preventDefault()}
     >
-      {/* <div></div>
-      <div></div> */}
+      <div></div>
+      <div></div>
     </div>
   );
 }
